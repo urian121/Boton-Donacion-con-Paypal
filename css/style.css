@@ -1014,6 +1014,7 @@ pre .copy-to-clipboard {
       color: rgba(87, 87, 86, 0.8);
       text-transform: uppercase;
       letter-spacing: 1.5px;
+      
   }
 
 .search__input:hover,
@@ -1025,5 +1026,19 @@ pre .copy-to-clipboard {
       border-bottom: 1px solid #575756;
       border-radius: 0;
       background-position: 100% center;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  label{
+    float: left !important;
+  }
+  #volverSelect{
+    color: #009cde;
+  }
+  #volverSelect:hover{
+    cursor: pointer;
   }
 /***fin input search **/

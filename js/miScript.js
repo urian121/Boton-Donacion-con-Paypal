@@ -1,4 +1,4 @@
-//Enviando Donacion   
+
 $(function(){
     $('#formDonation').on('submit', function(e){
         e.preventDefault();
@@ -11,18 +11,16 @@ $(function(){
             success: function(data){
                 if(data.message === 1){
                     $('#respuesta').text('Registro Cargado');
+                    setTimeout( ()=>{
+                        cargarPaypal();
+                     } , 500
+                 );
+                 $("#formDonation")[0].reset();
                 }else{
+                    $("#sendDonation").text("Enviar Donación");
                     $('#respuesta').text('Error en la Donación');
                   }
-                $("#formDonation")[0].reset();
-                $("#respuesta").html(data);
-                 setTimeout(
-                    ()=>{
-                        cargarPaypal();
-                     } , 1000
-                 );
-
-                }  
+            }  
         });
         return false;
     });

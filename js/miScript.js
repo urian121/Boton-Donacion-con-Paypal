@@ -10,7 +10,6 @@ $(function(){
             data: $('#formDonation').serialize(),
             success: function(data){
                 if(data.message === 1){
-                    $('#respuesta').text('Registro Cargado');
                     setTimeout( ()=>{
                         cargarPaypal();
                      } , 500

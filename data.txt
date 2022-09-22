@@ -1,0 +1,12 @@
+Donación Para: Jose Viera
+Nombre del Donante: Urian
+Mensaje:hola
+Monto: 10
+Fecha: 21-09-2022
+ 
+Donación Para: Jose Viera
+Nombre del Donante: ejemplo
+Mensaje:a
+Monto: 50
+Fecha: 21-09-2022
+ 

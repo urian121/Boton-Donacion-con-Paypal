@@ -19,7 +19,7 @@
       fwrite($file, "Fecha: ".$dateDonation  .$espacioDoble);
       fclose($file);
 
-      $jsondata['message'] = 2;
+      $jsondata['message'] = 1;
 
 header('Content-type: application/json; charset=utf-8');
 echo json_encode($jsondata);

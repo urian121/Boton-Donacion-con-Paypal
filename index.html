@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Boton Donacion con Paypal</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <section class="section">
+  <div class="container" style="max-width: 90% !important;">
+
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <img src="portada.PNG" style=" display:block; margin:0 auto;" class="img-fluid" alt="">
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-lg-7 col-md-7 text-lg-left text-center" style="padding-right: 1px !important; padding-left: 1px !important;">
+        <div class="p-5 shadow rounded content createcuentaUser">
+          <h2 class="section-title text-center">Mi Donación</h2>
+          
+          <form method="POST" action="" autocomplete="off" id="formDonation" name="formDonation">
+            <input type="text" name="para" value="Jose Viera" hidden>
+
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="donante">Nombre del Donante</label>
+                <input type="text" class="form-control" name="donante" required autofocus>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="mensaje">Mensaje</label>
+                <input type="text" class="form-control comentarioGrupo" name="mensaje" required autofocus>
+                <label for="mensaje" class="label label-important"></label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="emailDonante">Email</label>
+                <input type="email" class="form-control" name="emailDonante" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="montoDonation">Cantidad para donar</label>
+                  <select name="montoDonation" id="montoDonation" required class="form-control custom-select" required>
+                    <option selected disabled> -- Seleccione --</option>
+                    <option value="5">$5</option>
+                    <option value="10">$10</option>
+                    <option value="20">$20</option>
+                    <option value="25">$25</option>
+                    <option value="50">$50</option>
+                  </select>
+              </div>
+            </div>
+               
+            <div class="col-md-12 mt-3 mb-5 text-center">
+              <button type="submit" class="btn btn-primary" id="sendDonation">
+                Siguiente &nbsp;&nbsp; <i class="zmdi zmdi-long-arrow-right zmdi-hc-lg"></i>
+              </button>
+            </div>
+
+            <div id="respuesta"></div>
+          </form>
+        </div>
+      </div>
+      </div>
+    </div>
+</section>
+
+
+<form name="myForm" id="myForm" action="https://www.paypal.com/cgi-bin/webscr" method="POST">
+    <input type="hidden" name="cmd" value="_donations">
+    <input type="hidden" name="business" value="programadorphp2017@gmail.com">
+    <input type="hidden" name="item_name" value="Donacion">
+    <input type="hidden" name="item_number" value="">
+    <input type="hidden" name="amount" value="">
+    <input type="hidden" name="no_shipping" value="0">
+    <input type="hidden" name="no_note" value="1">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="lc" value="AU">
+    <input type="hidden" name="bn" value="PP-BuyNowBF">
+    <input type="submit" value="Submit" hidden/>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="miScript.js"></script>
+</body>
+</html>
